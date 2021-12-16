@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class FirstRiddleCallScript : MonoBehaviour
 {
+    public string Scene;
+
     void OnMouseDown()
     {
-        SceneManager.LoadScene("TempScene");
+        SceneManager.LoadScene(Scene);
     }
 }

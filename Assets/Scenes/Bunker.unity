@@ -5687,6 +5687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dc962b87bf2134d9643086b92b0d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Scene: RiddleScene
 --- !u!61 &917117059
 BoxCollider2D:
   m_ObjectHideFlags: 0

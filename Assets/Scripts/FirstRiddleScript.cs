@@ -9,6 +9,7 @@ public class FirstRiddleScript : MonoBehaviour
     [SerializeField] Text DayText;
     [SerializeField] Text MonthText;
     [SerializeField] Text YearText;
+    [SerializeField] Text ReminderText;
     private int DayNum = 1;
     private int MonthNum = 1;
     private int YearNum = 2000;
@@ -234,9 +235,7 @@ public class FirstRiddleScript : MonoBehaviour
     {
         if (DayNum == 3 && MonthNum == 6 && YearNum == 1992)
         {
-            DayText.text = "Win";
-            MonthText.text = "Win";
-            YearText.text = "Win";
+            SceneManager.LoadScene("EndScene");
         }
     }
 
