@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FirstRiddleScript : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class FirstRiddleScript : MonoBehaviour
     private int DayNum = 1;
     private int MonthNum = 1;
     private int YearNum = 2000;
-
 
 
     public void AddDay()
