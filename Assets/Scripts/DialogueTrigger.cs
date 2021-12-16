@@ -9,8 +9,16 @@ public class DialogueTrigger : MonoBehaviour
     
     public void TriggerDialogue()
     {
+        Debug.Log("TEST");
         FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue);
         
     }
 
+
+        public void  OnMouseDown() 
+    {
+        Debug.Log("TEST");
+        FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue);
+        
+    }
 }
