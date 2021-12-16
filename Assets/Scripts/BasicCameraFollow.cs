@@ -4,6 +4,7 @@ using System.Collections;
 public class BasicCameraFollow : MonoBehaviour 
 {
 
+
 	private Vector3 startingPosition;
 	public Transform followTarget;
 	private Vector3 targetPos;
