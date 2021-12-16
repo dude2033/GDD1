@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PreloadScene.unity
     guid: 74741a223aa4286459e243add6540e6b
   - enabled: 1
-    path: Assets/Scenes/TempScene.unity
+    path: Assets/Scenes/RiddleScene.unity
     guid: a04a20bbe272d3f42820ef4745afb715
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 45899a0ecd48e91499057020d35bf298
   m_configObjects: {}
