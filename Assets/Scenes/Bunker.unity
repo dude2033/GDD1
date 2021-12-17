@@ -766,11 +766,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogue:
-    name: RoboPC
+    name: ' '
     sentences:
-    - 'TEST '
-    - SPONGEBOB
-    - BLUB
+    - "PC: \nI'm afraid I can not do this.... unless you enter the correct date.
+      But I don't want you to, so I'll make it annoying."
+    - "Player: \nI really should reprogram this machine to be more pleasant.... I
+      need to enter the date 3.6.1992 on The AI over there."
+  StartDialogueBool: 0
 --- !u!61 &186438863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4521,6 +4523,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &658595381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6550531210781942586, guid: 88ed71408731ba24fb58216d92d054c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3583810768692250730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &658595382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658595381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: PlAyEr
+    sentences:
+    - At long last my time machine is finished.
+    - Now I shall go back and change the course of history.
+    - My first journey will take me to the 3.6.1992.
+    - I should go and click on the menacing red eye in my time machine.
+    - Why did I make it look so scary....?
+  StartDialogueBool: 1
 --- !u!114 &661358120 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8709490948673972435, guid: 03e7897c2b0159244ba9e9cac8a4c6da,
