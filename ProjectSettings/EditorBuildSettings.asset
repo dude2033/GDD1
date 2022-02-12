@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 45899a0ecd48e91499057020d35bf298
+  - enabled: 1
+    path: Assets/Scenes/PreLoadScene 1.unity
+    guid: 31a0d7904f4da3543957f9b02d58c3cc
   m_configObjects: {}

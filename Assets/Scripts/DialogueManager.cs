@@ -17,6 +17,13 @@ public class DialogueManager : MonoBehaviour
         currentDialog = new Queue<string>();
         
     }
+
+    void Update() 
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+            DisplayNext();
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
        
