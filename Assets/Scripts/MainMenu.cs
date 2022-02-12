@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    SceneManagerScript SceneHandler;
+
+    GameObject SceneObject;
 
     void Start()
     {
@@ -17,9 +20,14 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    void Awake()
+    {
+        SceneObject = GameObject.FindGameObjectWithTag("Loader");
+        SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
+    }
     public void StartGame(string Scene)
     {
-        SceneManager.LoadScene(Scene);
+        SceneHandler.LoadNewMap(Scene);
     }
 
     public void ExitGame()
@@ -30,11 +38,11 @@ public class MainMenu : MonoBehaviour
 
     public void Info(string Scene)
     {
-        SceneManager.LoadScene(Scene);
+        SceneHandler.LoadNewMap(Scene);
     }
 
     public void Back(string Scene)
     {
-        SceneManager.LoadScene(Scene);
+        SceneHandler.LoadNewMap(Scene);
     }
 }

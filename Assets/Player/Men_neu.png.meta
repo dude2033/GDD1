@@ -1,103 +1,55 @@
 fileFormatVersion: 2
-guid: f75e348c4a88f904eba17180aec295cc
+guid: b70d26b460746d74caadf8bee2a43e60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6534586468793201136
-    second: player_sprite_sheet_0
+      213: 2422635354078854226
+    second: Men_neu_0
   - first:
-      213: -3860537973577564116
-    second: player_sprite_sheet_1
+      213: 83859192614561029
+    second: Men_neu_1
   - first:
-      213: -432055227224596353
-    second: player_sprite_sheet_2
+      213: 8589101591285415800
+    second: Men_neu_2
   - first:
-      213: -3184058216503023251
-    second: player_sprite_sheet_3
+      213: 2914232487425297184
+    second: Men_neu_3
   - first:
-      213: 6217555554104186210
-    second: player_sprite_sheet_4
+      213: -4992243428365759565
+    second: Men_neu_4
   - first:
-      213: 7547744061782356882
-    second: player_sprite_sheet_5
+      213: 6153826125613824166
+    second: Men_neu_5
   - first:
-      213: -2362702907046220289
-    second: player_sprite_sheet_6
+      213: -2885907341455112936
+    second: Men_neu_6
   - first:
-      213: 7780727999164032525
-    second: player_sprite_sheet_7
+      213: -406764378924749988
+    second: Men_neu_7
   - first:
-      213: -4000998897797712876
-    second: player_sprite_sheet_8
+      213: -1464435815422154924
+    second: Men_neu_8
   - first:
-      213: -853577265601503717
-    second: player_sprite_sheet_9
+      213: -6238384567678572128
+    second: Men_neu_9
   - first:
-      213: 2081120453754615063
-    second: player_sprite_sheet_10
+      213: -7882770178041099107
+    second: Men_neu_10
   - first:
-      213: 4666493044100920907
-    second: player_sprite_sheet_11
+      213: -8013621064666881793
+    second: Men_neu_11
   - first:
-      213: -7053235482517077058
-    second: player_sprite_sheet_12
+      213: 8541633732622939639
+    second: Men_neu_12
   - first:
-      213: -2578492533872941188
-    second: player_sprite_sheet_13
+      213: 7270169166727368350
+    second: Men_neu_13
   - first:
-      213: -1941288381019648998
-    second: player_sprite_sheet_14
+      213: 3562937107635783853
+    second: Men_neu_14
   - first:
-      213: -8816819344145585900
-    second: player_sprite_sheet_15
-  - first:
-      213: 3037787235334439478
-    second: player_sprite_sheet 1_0
-  - first:
-      213: -8856785122108103066
-    second: player_sprite_sheet 1_1
-  - first:
-      213: 4054269182157426805
-    second: player_sprite_sheet 1_2
-  - first:
-      213: 1053020578093774083
-    second: player_sprite_sheet 1_3
-  - first:
-      213: -3634420839631908344
-    second: player_sprite_sheet 1_4
-  - first:
-      213: 4800015567551236932
-    second: player_sprite_sheet 1_5
-  - first:
-      213: -6184494839582317817
-    second: player_sprite_sheet 1_6
-  - first:
-      213: 3004050681324207220
-    second: player_sprite_sheet 1_7
-  - first:
-      213: 747947109378790358
-    second: player_sprite_sheet 1_8
-  - first:
-      213: -4486193420887369396
-    second: player_sprite_sheet 1_9
-  - first:
-      213: -4765469995597669761
-    second: player_sprite_sheet 1_10
-  - first:
-      213: -7921890231986159993
-    second: player_sprite_sheet 1_11
-  - first:
-      213: -3665646954083070194
-    second: player_sprite_sheet 1_12
-  - first:
-      213: 8937215080802262447
-    second: player_sprite_sheet 1_13
-  - first:
-      213: -8971880650598625164
-    second: player_sprite_sheet 1_14
-  - first:
-      213: 8281254576281070752
-    second: player_sprite_sheet 1_15
+      213: 4802823202122093659
+    second: Men_neu_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -195,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_sprite_sheet 1_0
+      name: Men_neu_0
       rect:
         serializedVersion: 2
         x: 11
@@ -209,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63243594563682a20800000000000000
-      internalID: 3037787235334439478
+      spriteID: 25c3c24d40eee9120800000000000000
+      internalID: 2422635354078854226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_1
+      name: Men_neu_1
       rect:
         serializedVersion: 2
         x: 59
@@ -230,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66628c05bd0661580800000000000000
-      internalID: -8856785122108103066
+      spriteID: 50521facd7de92100800000000000000
+      internalID: 83859192614561029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_2
+      name: Men_neu_2
       rect:
         serializedVersion: 2
         x: 107
@@ -251,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5709e4a3758a34830800000000000000
-      internalID: 4054269182157426805
+      spriteID: 87f3f48e36e923770800000000000000
+      internalID: 8589101591285415800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_3
+      name: Men_neu_3
       rect:
         serializedVersion: 2
         x: 155
@@ -272,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 305b47af2a41d9e00800000000000000
-      internalID: 1053020578093774083
+      spriteID: 02b43edc10f617820800000000000000
+      internalID: 2914232487425297184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_4
+      name: Men_neu_4
       rect:
         serializedVersion: 2
         x: 11
@@ -293,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80296799081ff8dc0800000000000000
-      internalID: -3634420839631908344
+      spriteID: 3bb0bfb4d0df7bab0800000000000000
+      internalID: -4992243428365759565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_5
+      name: Men_neu_5
       rect:
         serializedVersion: 2
         x: 59
@@ -314,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44b8c342ab41d9240800000000000000
-      internalID: 4800015567551236932
+      spriteID: 6a8fab2c148c66550800000000000000
+      internalID: 6153826125613824166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_6
+      name: Men_neu_6
       rect:
         serializedVersion: 2
         x: 107
@@ -335,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 703a573d5b24c2aa0800000000000000
-      internalID: -6184494839582317817
+      spriteID: 81540e9209233f7d0800000000000000
+      internalID: -2885907341455112936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_7
+      name: Men_neu_7
       rect:
         serializedVersion: 2
         x: 155
@@ -356,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47c7993bd2880b920800000000000000
-      internalID: 3004050681324207220
+      spriteID: c5b68e6d3f1ea5af0800000000000000
+      internalID: -406764378924749988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_8
+      name: Men_neu_8
       rect:
         serializedVersion: 2
         x: 13
@@ -377,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d39d45eeed316a00800000000000000
-      internalID: 747947109378790358
+      spriteID: 457276182674dabe0800000000000000
+      internalID: -1464435815422154924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_9
+      name: Men_neu_9
       rect:
         serializedVersion: 2
         x: 61
@@ -398,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4950524ad6ddb1c0800000000000000
-      internalID: -4486193420887369396
+      spriteID: 0a96d3fb94ecc69a0800000000000000
+      internalID: -6238384567678572128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_10
+      name: Men_neu_10
       rect:
         serializedVersion: 2
         x: 109
@@ -419,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7a5e9c9946adddb0800000000000000
-      internalID: -4765469995597669761
+      spriteID: d9c41dba946ca9290800000000000000
+      internalID: -7882770178041099107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_11
+      name: Men_neu_11
       rect:
         serializedVersion: 2
         x: 157
@@ -440,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78ef3d45ecacf0290800000000000000
-      internalID: -7921890231986159993
+      spriteID: ff061f38916e9c090800000000000000
+      internalID: -8013621064666881793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_12
+      name: Men_neu_12
       rect:
         serializedVersion: 2
         x: 11
@@ -461,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0fc2e54481012dc0800000000000000
-      internalID: -3665646954083070194
+      spriteID: 7f5fb72df9af98670800000000000000
+      internalID: 8541633732622939639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_13
+      name: Men_neu_13
       rect:
         serializedVersion: 2
         x: 59
@@ -482,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fad9b7cb3cd570c70800000000000000
-      internalID: 8937215080802262447
+      spriteID: e9e48cf8654d4e460800000000000000
+      internalID: 7270169166727368350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_14
+      name: Men_neu_14
       rect:
         serializedVersion: 2
         x: 107
@@ -503,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4705ed5551a7d7380800000000000000
-      internalID: -8971880650598625164
+      spriteID: da840b11c68127130800000000000000
+      internalID: 3562937107635783853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_sprite_sheet 1_15
+      name: Men_neu_15
       rect:
         serializedVersion: 2
         x: 155
@@ -524,8 +476,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0acafc1492dece270800000000000000
-      internalID: 8281254576281070752
+      spriteID: b54dd71814e07a240800000000000000
+      internalID: 4802823202122093659
       vertices: []
       indices: 
       edges: []
