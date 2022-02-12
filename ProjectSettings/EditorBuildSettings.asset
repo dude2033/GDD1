@@ -6,24 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PreLoadScene 1.unity
+    guid: 31a0d7904f4da3543957f9b02d58c3cc
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3cd168fdb30dc9b469e96827a0fcd96b
   - enabled: 1
     path: Assets/Scenes/Info.unity
     guid: a7778a18e522085488ad369707c4ffa4
   - enabled: 1
+    path: Assets/Scenes/SelectPlayer.unity
+    guid: ce618cf3f72c0684094ccca6517324a6
+  - enabled: 1
     path: Assets/Scenes/Bunker.unity
     guid: c1d3de4cfe8c78846b1950766a435746
-  - enabled: 1
-    path: Assets/Scenes/PreloadScene.unity
-    guid: 74741a223aa4286459e243add6540e6b
   - enabled: 1
     path: Assets/Scenes/RiddleScene.unity
     guid: a04a20bbe272d3f42820ef4745afb715
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 45899a0ecd48e91499057020d35bf298
-  - enabled: 1
-    path: Assets/Scenes/PreLoadScene 1.unity
-    guid: 31a0d7904f4da3543957f9b02d58c3cc
   m_configObjects: {}
