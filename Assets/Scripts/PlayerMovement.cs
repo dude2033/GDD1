@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+
     //public Animator animator;
+
 
     // Update is called once per frame
     void Update()
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
         //inupt 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
 
         //animator.SetFloat("Horizontal", movement.x);
         // animator.SetFloat("Vertical", movement.y);
