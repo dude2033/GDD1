@@ -673,10 +673,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 5d9bd887-c5b7-4448-9b63-c8ceec66f1de
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: GDD1_As2
+  organizationId: dude2033
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
