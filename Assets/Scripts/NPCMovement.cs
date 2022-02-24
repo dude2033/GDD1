@@ -9,19 +9,24 @@ public class NPCMovement : MonoBehaviour
     public float speed;
     private Rigidbody2D myRg;
     private Animator anim;
+
+    public bool conditionToMove = false;
+
+    private bool startMoving;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         myTransform = GetComponent<Transform>();
         myRg = GetComponent<Rigidbody2D>();
-        Changedir();
+        startMoving = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Changedir();
         Move();
     }
 
@@ -32,13 +37,28 @@ public class NPCMovement : MonoBehaviour
 
     private void Changedir()
     {
-        dir = Vector3.right;
+        if (startMoving)
+        {
+            dir = Vector3.right;
+        }
         UpdateAnimation();
+
     }
 
     void UpdateAnimation()
     {
-        anim.SetFloat("MoveX", dir.x);
-        anim.SetFloat("MoveY", dir.y);
+
+        if (conditionToMove)
+        {
+            anim.SetBool("StartMove", false);
+            startMoving = true;
+            anim.SetFloat("MoveX", dir.x);
+            anim.SetFloat("MoveY", dir.y);
+        }
+        else
+        {
+            startMoving = false;
+        }
+
     }
 }

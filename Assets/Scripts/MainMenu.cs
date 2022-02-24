@@ -45,4 +45,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneHandler.LoadNewMap(Scene);
     }
+
+    public void Past(string Scene)
+    {
+        SceneHandler.LoadNewMap(Scene);
+    }
 }

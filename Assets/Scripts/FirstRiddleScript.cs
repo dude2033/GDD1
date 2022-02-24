@@ -10,17 +10,19 @@ public class FirstRiddleScript : MonoBehaviour
     [SerializeField] Text MonthText;
     [SerializeField] Text YearText;
     [SerializeField] Text ReminderText;
+    [SerializeField] GameObject TeleportButton;
+    [SerializeField] GameObject Up1;
+    [SerializeField] GameObject Up2;
+    [SerializeField] GameObject Up3;
+    [SerializeField] GameObject Down1;
+    [SerializeField] GameObject Down2;
+    [SerializeField] GameObject Down3;
     SceneManagerScript SceneHandler;
     GameObject SceneObject;
     private int DayNum = 1;
     private int MonthNum = 1;
     private int YearNum = 2000;
 
-    void Awake()
-    {
-        SceneObject = GameObject.FindGameObjectWithTag("Loader");
-        SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
-    }
 
     public void AddDay()
     {
@@ -242,7 +244,13 @@ public class FirstRiddleScript : MonoBehaviour
     {
         if (DayNum == 3 && MonthNum == 6 && YearNum == 1992)
         {
-            SceneHandler.LoadNewMap("EndScene");
+            TeleportButton.SetActive(true);
+            Up1.SetActive(false);
+            Up2.SetActive(false);
+            Up3.SetActive(false);
+            Down1.SetActive(false);
+            Down2.SetActive(false);
+            Down3.SetActive(false);
         }
     }
 
