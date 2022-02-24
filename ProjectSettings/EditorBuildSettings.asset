@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Bunker.unity
     guid: c1d3de4cfe8c78846b1950766a435746
   - enabled: 1
+    path: Assets/Scenes/Past1.unity
+    guid: 7747987f8b532c841bb22d3c3d9b463b
+  - enabled: 1
     path: Assets/Scenes/RiddleScene.unity
     guid: a04a20bbe272d3f42820ef4745afb715
   - enabled: 1

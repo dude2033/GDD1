@@ -5,18 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class FirstRiddleCallScript : MonoBehaviour
 {
-    public string Scene;
-    SceneManagerScript SceneHandler;
 
-    GameObject SceneObject;
+    public static bool isGamePaused = false;
+    [SerializeField] GameObject Riddle;
 
-    void Awake()
-    {
-        SceneObject = GameObject.FindGameObjectWithTag("Loader");
-        SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
-    }
+    [SerializeField] GameObject TeleportButton;
     void OnMouseDown()
     {
-        SceneHandler.LoadNewMap(Scene);
+        isGamePaused = true;
+        StartRiddle();
+    }
+
+    void StartRiddle()
+    {
+        if (isGamePaused)
+        {
+            Riddle.SetActive(true);
+            TeleportButton.SetActive(false);
+            Time.timeScale = 0f;
+            isGamePaused = true;
+        }
+    }
+    public void Back()
+    {
+        Riddle.SetActive(false);
+        Time.timeScale = 1f;
+        isGamePaused = false;
     }
 }
