@@ -4352,6 +4352,8 @@ MonoBehaviour:
   SelectedSkin: {fileID: 3203987248162819387, guid: f5bbdf3aa7ef08843bf150d59673dcb3,
     type: 3}
   Player: {fileID: 2923013809718358539}
+  male: {fileID: 9100000, guid: f3b97da9f49b048429879e9b494dcf3d, type: 2}
+  female: {fileID: 9100000, guid: b1f0e080a50e2514ab1e032a41d4946d, type: 2}
 --- !u!4 &882699280
 Transform:
   m_ObjectHideFlags: 0
@@ -9643,6 +9645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982422891381334920, guid: 0a37f7d0df03c184aba4e51bd890a54f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a37f7d0df03c184aba4e51bd890a54f, type: 3}

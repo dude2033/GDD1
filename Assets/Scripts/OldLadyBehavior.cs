@@ -30,7 +30,6 @@ public class OldLadyBehavior : MonoBehaviour
 
     void changelook()
     {
-        Debug.Log(diffAngle);
         if (diffAngle < 130 && diffAngle > 75)
         {
             anim.SetBool("Left", true);

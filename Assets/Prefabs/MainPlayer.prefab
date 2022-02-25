@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 2923013809718358540}
   - component: {fileID: 2923013809718358541}
   - component: {fileID: 5249496655499344263}
+  - component: {fileID: 1641899227}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5633028984454211824
 Transform:
   m_ObjectHideFlags: 0
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.625, y: 2.8125}
+  m_Size: {x: 1.5625, y: 2.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   rb: {fileID: 2923013809718358540}
+  animator: {fileID: 1641899227}
 --- !u!60 &5249496655499344263
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +151,22 @@ PolygonCollider2D:
       - {x: -0.38161892, y: -1.3175606}
       - {x: 0.38161862, y: -1.3175609}
       - {x: 0.48374748, y: -0.9967022}
+--- !u!95 &1641899227
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8982422891381334920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
