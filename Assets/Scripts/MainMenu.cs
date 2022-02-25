@@ -9,9 +9,11 @@ public class MainMenu : MonoBehaviour
 
     GameObject SceneObject;
 
+    [SerializeField] GameObject Riddle;
+
     void Start()
     {
-
+        Riddle.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class MainMenu : MonoBehaviour
 
     public void Past(string Scene)
     {
+        Time.timeScale = 1f;
         SceneHandler.LoadNewMap(Scene);
     }
 }
