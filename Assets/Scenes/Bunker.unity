@@ -5920,6 +5920,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281534133}
   m_CullTransparentMesh: 0
+--- !u!1 &1291654888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 132547962177668272, guid: 27a4c212ef2f9974d973b2588300f8b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 132547961862979013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1291654889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291654888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc16b71c0537db48ae0a6aea57c003a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302554811
 GameObject:
   m_ObjectHideFlags: 0
@@ -9344,7 +9362,7 @@ PrefabInstance:
     - target: {fileID: 132547962177668272, guid: 27a4c212ef2f9974d973b2588300f8b5,
         type: 3}
       propertyPath: m_Name
-      value: Rate
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 132547962177668274, guid: 27a4c212ef2f9974d973b2588300f8b5,
         type: 3}
