@@ -11024,7 +11024,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 300}
+  m_SizeDelta: {x: 250, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129237744
 MonoBehaviour:
@@ -11058,7 +11058,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: Welcom to the Past
+  m_Text: Welcome to the Past
 --- !u!222 &1129237745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13799,6 +13799,8 @@ MonoBehaviour:
   SelectedSkin: {fileID: 3203987248162819387, guid: f5bbdf3aa7ef08843bf150d59673dcb3,
     type: 3}
   Player: {fileID: 1641899222}
+  male: {fileID: 9100000, guid: f3b97da9f49b048429879e9b494dcf3d, type: 2}
+  female: {fileID: 9100000, guid: b1f0e080a50e2514ab1e032a41d4946d, type: 2}
 --- !u!4 &1196017656
 Transform:
   m_ObjectHideFlags: 0
@@ -16554,11 +16556,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982422891381334920, guid: 0a37f7d0df03c184aba4e51bd890a54f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a37f7d0df03c184aba4e51bd890a54f, type: 3}
