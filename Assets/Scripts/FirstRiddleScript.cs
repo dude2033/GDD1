@@ -46,32 +46,12 @@ public class FirstRiddleScript : MonoBehaviour
             MonthNum = 1;
         }
         MonthText.text = MonthNum.ToString() + ".";
-        YearNum -= 1;
-        if (YearNum < 1990)
-        {
-            YearNum = 2010;
-        }
-        else if (YearNum > 2010)
-        {
-            YearNum = 1990;
-        }
-        YearText.text = YearNum.ToString();
         CheckDate();
     }
 
 
     public void AddMonth()
     {
-        DayNum += 1;
-        if (DayNum < 1)
-        {
-            DayNum = 31;
-        }
-        else if (DayNum > 31)
-        {
-            DayNum = 1;
-        }
-        DayText.text = DayNum.ToString() + ".";
         MonthNum += 1;
         if (MonthNum < 1)
         {
@@ -82,7 +62,7 @@ public class FirstRiddleScript : MonoBehaviour
             MonthNum = 1;
         }
         MonthText.text = MonthNum.ToString() + ".";
-        YearNum += 2;
+        YearNum += 1;
         if (YearNum < 1990)
         {
             YearNum = 2010;
@@ -108,16 +88,6 @@ public class FirstRiddleScript : MonoBehaviour
             DayNum = 1;
         }
         DayText.text = DayNum.ToString() + ".";
-        MonthNum -= 1;
-        if (MonthNum < 1)
-        {
-            MonthNum = 12;
-        }
-        else if (MonthNum > 12)
-        {
-            MonthNum = 1;
-        }
-        MonthText.text = MonthNum.ToString() + ".";
         YearNum += 1;
         if (YearNum < 1990)
         {
@@ -155,31 +125,11 @@ public class FirstRiddleScript : MonoBehaviour
             MonthNum = 1;
         }
         MonthText.text = MonthNum.ToString() + ".";
-        YearNum -= 2;
-        if (YearNum < 1990)
-        {
-            YearNum = 2010;
-        }
-        else if (YearNum > 2010)
-        {
-            YearNum = 1990;
-        }
-        YearText.text = YearNum.ToString();
         CheckDate();
     }
 
     public void SubMonth()
     {
-        DayNum += 1;
-        if (DayNum < 1)
-        {
-            DayNum = 31;
-        }
-        else if (DayNum > 31)
-        {
-            DayNum = 1;
-        }
-        DayText.text = DayNum.ToString() + ".";
         MonthNum -= 1;
         if (MonthNum < 1)
         {
@@ -205,7 +155,7 @@ public class FirstRiddleScript : MonoBehaviour
 
     public void SubYear()
     {
-        DayNum -= 2;
+        DayNum -= 1;
         if (DayNum < 1)
         {
             DayNum = 31;
@@ -215,16 +165,6 @@ public class FirstRiddleScript : MonoBehaviour
             DayNum = 1;
         }
         DayText.text = DayNum.ToString() + ".";
-        MonthNum += 2;
-        if (MonthNum < 1)
-        {
-            MonthNum = 12;
-        }
-        else if (MonthNum > 12)
-        {
-            MonthNum = 1;
-        }
-        MonthText.text = MonthNum.ToString() + ".";
         YearNum -= 1;
         if (YearNum < 1990)
         {
@@ -245,12 +185,6 @@ public class FirstRiddleScript : MonoBehaviour
         if (DayNum == 3 && MonthNum == 6 && YearNum == 1992)
         {
             TeleportButton.SetActive(true);
-            Up1.SetActive(false);
-            Up2.SetActive(false);
-            Up3.SetActive(false);
-            Down1.SetActive(false);
-            Down2.SetActive(false);
-            Down3.SetActive(false);
         }
     }
 
