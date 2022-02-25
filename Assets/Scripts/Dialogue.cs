@@ -6,9 +6,21 @@ using UnityEngine;
 public class Dialogue
 {    
     public string name;
+    public int converstationPosition = 0;
+
+
+    [System.Serializable]
+    public class conversation
+    {
+        [TextArea(0,4)]
+            public string[] sentences;
+    }
+
+
+    public conversation[] Conversation;
     
-    [TextArea(3,10)]
-    public string[] sentences;
-
-
+    [TextArea(1,4)]
+    public string[] choises;
+    
 }
+

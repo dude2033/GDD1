@@ -10,38 +10,36 @@ public class DialogueTrigger : MonoBehaviour
     public bool StartDialogueBool;
 
 
-    
-    
+    public bool DialoagIsActive;
+
+    public bool ChoiseIsSet = false;
+    public string choise = "";
+
+    public MainDialgueHandler script; 
+
+
+   
     private void Update() 
     {
-        		if(StartDialogueBool)
-                    StartDialogue();
+
+        if(DialoagIsActive && ChoiseIsSet)
+        {
+            script.executeFunction(choise);
+            choise = "";
+            
+           // test.testFunction();
+            //TODO: set script event here
+
+        }
     }
 
-    public void TriggerDialogue()
+
+    public void  OnMouseDown() 
     {
+        DialoagIsActive = true;
         Debug.Log("TEST");
-        FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue, this);
         
     }
-
-
-        public void  OnMouseDown() 
-    {
-        Debug.Log("TEST");
-        FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue);
-        
-    }
-    public void StartDialogue()
-    {
-        StartDialogueBool = false;
-        Debug.Log("TEST");
-        FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue);
-        
-    }
-
-
-
-
 
 }
