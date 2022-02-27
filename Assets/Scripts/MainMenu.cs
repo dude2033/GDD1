@@ -9,11 +9,12 @@ public class MainMenu : MonoBehaviour
 
     GameObject SceneObject;
 
-    [SerializeField] GameObject Riddle;
+    public Animator transition;
 
+    public float transtitiontime = 1f;
     void Start()
     {
-        Riddle.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame(string Scene)
     {
-        SceneHandler.LoadNewMap(Scene);
+        StartCoroutine(LoadLevel(Scene));
     }
 
     public void ExitGame()
@@ -40,17 +41,27 @@ public class MainMenu : MonoBehaviour
 
     public void Info(string Scene)
     {
-        SceneHandler.LoadNewMap(Scene);
+        StartCoroutine(LoadLevel(Scene));
     }
 
     public void Back(string Scene)
     {
-        SceneHandler.LoadNewMap(Scene);
+        StartCoroutine(LoadLevel(Scene));
     }
 
     public void Past(string Scene)
     {
         Time.timeScale = 1f;
+        StartCoroutine(LoadLevel(Scene));
+    }
+
+    IEnumerator LoadLevel(string Scene)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transtitiontime);
+
         SceneHandler.LoadNewMap(Scene);
     }
+
 }
