@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        Riddle.SetActive(false);
+       // Riddle.SetActive(false);
     }
 
     // Update is called once per frame

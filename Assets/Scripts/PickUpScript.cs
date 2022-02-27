@@ -15,7 +15,7 @@ public class PickUpScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D other) 
+/*    private void OnTriggerEnter2D(Collider2D other) 
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         inventory.slots = GameObject.FindGameObjectsWithTag("Slot");
@@ -44,5 +44,5 @@ public class PickUpScript : MonoBehaviour
         
 
         }
-    }
+    }*/
 }
