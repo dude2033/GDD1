@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public float transtitiontime = 1f;
     void Start()
     {
-
+       // Riddle.SetActive(false);
     }
 
     // Update is called once per frame
