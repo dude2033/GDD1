@@ -12,8 +12,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public bool DialoagIsActive;
 
-    public bool ChoiseIsSet = false;
-    public string choise = "";
+    public bool ChoiceIsSet = false;
+    public string choice = "";
 
     public MainDialgueHandler script; 
 
@@ -22,10 +22,10 @@ public class DialogueTrigger : MonoBehaviour
     private void Update() 
     {
 
-        if(DialoagIsActive && ChoiseIsSet)
+        if(DialoagIsActive && ChoiceIsSet)
         {
-            script.executeFunction(choise);
-            choise = "";
+            script.executeFunction(choice);
+            choice = "";
             
            // test.testFunction();
             //TODO: set script event here
@@ -37,7 +37,8 @@ public class DialogueTrigger : MonoBehaviour
     public void  OnMouseDown() 
     {
         DialoagIsActive = true;
-        Debug.Log("TEST");
+        //Debug.Log("TEST");
+        script.setUpCondition();
         FindObjectOfType<DialogueManager>().StartDialogue(currentDialogue, this);
         
     }

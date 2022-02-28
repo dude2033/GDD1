@@ -384,8 +384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogue:
-    name: ' '
-    converstationPosition: 0
+    name: Roboto
+    converstationElement: 0
     Conversation:
     - sentences:
       - "PC: \nI'm afraid I can not do this.... unless you enter the correct date.
@@ -395,13 +395,19 @@ MonoBehaviour:
     - sentences:
       - muhahahhahah
       - it works thouughghhhh!!!
-    choises:
-    - etest
-    - sssss
+    disableChoice: 0
+    choiceElement: 0
+    Choices:
+    - choices:
+      - 
+      - 
+    - choices:
+      - 
+      - 
   StartDialogueBool: 0
   DialoagIsActive: 0
-  ChoiseIsSet: 0
-  choise: 
+  ChoiceIsSet: 0
+  choice: 
   script: {fileID: 186438865}
 --- !u!61 &186438863
 BoxCollider2D:
@@ -6105,7 +6111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1326231604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9418,6 +9424,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1074107315112920976, guid: 0a37f7d0df03c184aba4e51bd890a54f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127878933411853802, guid: 0a37f7d0df03c184aba4e51bd890a54f,
+        type: 3}
+      propertyPath: isFull.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5249496655499344263, guid: 0a37f7d0df03c184aba4e51bd890a54f,
         type: 3}
       propertyPath: m_IsTrigger

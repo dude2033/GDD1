@@ -8,5 +8,5 @@ public class MainDialgueHandler : MonoBehaviour
    
 
     public virtual void executeFunction (string choise){}
-
+   public virtual void setUpCondition (){}
 }

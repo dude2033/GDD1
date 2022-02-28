@@ -6,7 +6,9 @@ using UnityEngine;
 public class Dialogue
 {    
     public string name;
-    public int converstationPosition = 0;
+    public int converstationElement = 0;
+
+    
 
 
     [System.Serializable]
@@ -16,11 +18,20 @@ public class Dialogue
             public string[] sentences;
     }
 
+    [System.Serializable]
+    public class conversationChoices
+    {
+        [TextArea(1,4)]
+            public string[] choices;
+    }
+
 
     public conversation[] Conversation;
     
-    [TextArea(1,4)]
-    public string[] choises;
+
+    public bool disableChoice;
+    public int choiceElement = 0;
+    public conversationChoices[] Choices;
     
 }
 

@@ -11376,6 +11376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bodyguard
       objectReference: {fileID: 0}
+    - target: {fileID: 3738659685083771178, guid: c356cca930c1f9f4bbef8ba98855f236,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
 --- !u!1 &572283475
@@ -14589,6 +14594,8 @@ GameObject:
   - component: {fileID: 1139283468}
   - component: {fileID: 1139283469}
   - component: {fileID: 1139283470}
+  - component: {fileID: 1139283471}
+  - component: {fileID: 1139283472}
   m_Layer: 0
   m_Name: AlteDame
   m_TagString: Untagged
@@ -14752,6 +14759,72 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95964336, y: 2.358574}
   m_EdgeRadius: 0
+--- !u!114 &1139283471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139283463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Old Lady
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - Hello, hello. Can I interest you in a little game?
+    - sentences:
+      - "It\u2019s a simple question-answer-game."
+      - I Will ask you a question and if you get the answer right, you win a teddy
+        bear. Sounds good?
+    - sentences:
+      - 'Ok here we go:'
+      - If I have eight Oranges in a bag and you take two, how many do you have?
+    - sentences:
+      - "Sorry hun that\u2019s not quite correct. But I\u2019ll give you a bear anyways
+        because I feel sorry for you!"
+    - sentences:
+      - "That\u2019s right! Here you go, a true winner!"
+    - sentences:
+      - Sorry hun. Only one bear per person a day!
+    disableChoice: 0
+    choiceElement: 0
+    Choices:
+    - choices:
+      - What game?
+      - Sure!
+      - No thanks!
+    - choices:
+      - "Sure, let\u2019s do it!"
+      - Not right now, thanks.
+    - choices:
+      - 6!
+      - 2!
+      - 8!
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 1139283472}
+--- !u!114 &1139283472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139283463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137e26c51e5075846a49dee9063b0d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 70dec1d38ef06c64995b0adb98c88336, type: 3}
+  DTrigger: {fileID: 1139283471}
+  teddyGone: 0
 --- !u!1 &1193738864
 GameObject:
   m_ObjectHideFlags: 0
@@ -17389,6 +17462,8 @@ GameObject:
   - component: {fileID: 1214461616}
   - component: {fileID: 1214461615}
   - component: {fileID: 1214461614}
+  - component: {fileID: 1214461618}
+  - component: {fileID: 1214461619}
   m_Layer: 0
   m_Name: VendingMachine
   m_TagString: Untagged
@@ -17505,6 +17580,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1214461618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214461613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Soda machine
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - I could get a red, blue or a green drink here.
+      - "But I don\u2019t have any money. I should look around, maybe someone dropped
+        some around here somewhere."
+    - sentences:
+      - "Hmm\u2026 What drink should I get?"
+    disableChoice: 1
+    choiceElement: 0
+    Choices:
+    - choices:
+      - Get a red drink.
+      - Get a blue drink.
+      - Get a green drink.
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 1214461619}
+--- !u!114 &1214461619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214461613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50bb91a75c42d1244b936f1dedbbf9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DTrigger: {fileID: 0}
+  Image: {fileID: 0}
 --- !u!1 &1223884199
 GameObject:
   m_ObjectHideFlags: 0
@@ -20090,6 +20213,8 @@ GameObject:
   - component: {fileID: 1330107566}
   - component: {fileID: 1330107568}
   - component: {fileID: 1330107569}
+  - component: {fileID: 1330107571}
+  - component: {fileID: 1330107570}
   m_Layer: 0
   m_Name: Tree_30
   m_TagString: Untagged
@@ -20215,6 +20340,50 @@ PolygonCollider2D:
       - {x: -0.6136364, y: -1.2954546}
       - {x: -0.54545456, y: -1.7045455}
       - {x: -0.54545456, y: -1.6363637}
+--- !u!114 &1330107570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330107565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6cc44152e188346a5b3417da46567b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DTrigger: {fileID: 1330107571}
+  Image: {fileID: 21300000, guid: 725c80c4dac990343b531f712190e1c1, type: 3}
+--- !u!114 &1330107571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330107565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Tree in the park
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - "The tree has a lot of useful sticks.\r"
+    - sentences:
+      - "I shouldn\u2019t take more. People will think I'm weird!"
+    disableChoice: 0
+    choiceElement: 0
+    Choices:
+    - choices:
+      - '"Grab a stick."'
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 1330107570}
 --- !u!1 &1507890530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5915366618994084576, guid: 2601eb7bc53b9e74390b8dc5e408b420,
@@ -31403,6 +31572,8 @@ GameObject:
   - component: {fileID: 2142328671}
   - component: {fileID: 2142328670}
   - component: {fileID: 2142328669}
+  - component: {fileID: 2142328674}
+  - component: {fileID: 2142328673}
   m_Layer: 0
   m_Name: KidWindow
   m_TagString: Untagged
@@ -31517,6 +31688,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142328673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142328668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97cc5bddb1fba384b96c38a40dcd6467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 0}
+  DTrigger: {fileID: 2142328674}
+--- !u!114 &2142328674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142328668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Kid in the window
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - Hey! You got anything for me to play with?
+      - "I\u2019m so bored because I have to stay inside all day because I\u2019m
+        sick."
+    - sentences:
+      - Thanks. I could trade you some chewing gum for it!
+    - sentences:
+      - "Oh this is awesome! Can I really have that? Thank you so much! \u2026. Here
+        you go! "
+    disableChoice: 0
+    choiceElement: 0
+    Choices:
+    - choices:
+      - "Nope sorry! But I\u2019ll look around and tell you if I find anything!"
+    - choices:
+      - "Nope sorry! But I\u2019ll look around and tell you if I find anything!"
+      - What about this cute fellow?
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 2142328673}
 --- !u!1001 &1549388710475273494
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,13 +7,16 @@ public class RobotTestScript : MainDialgueHandler
 
     public DialogueTrigger testTrigger;
 
-
+    public override void setUpCondition()
+    {
+        
+    }
     public override void executeFunction(string choise)
     {
         if(choise == "a")
         {
             Debug.Log("it works fine though");
-            testTrigger.currentDialogue.converstationPosition  = testTrigger.currentDialogue.converstationPosition + 1;
+            testTrigger.currentDialogue.converstationElement  = testTrigger.currentDialogue.converstationElement + 1;
             testTrigger.OnMouseDown();
 
 
