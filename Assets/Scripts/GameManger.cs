@@ -15,7 +15,7 @@ public class GameManger : MonoBehaviour
     {
         PlayerSprite = SelectedSkin.GetComponent<SpriteRenderer>().sprite;
         Player.GetComponent<SpriteRenderer>().sprite = PlayerSprite;
-        Debug.Log(PlayerSprite.name);
+
         if (PlayerSprite.name == "Women_neu_0")
         {
             Player.gameObject.GetComponent<Animator>().runtimeAnimatorController = Instantiate(female) as RuntimeAnimatorController;

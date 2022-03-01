@@ -3996,7 +3996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &892872690
 GameObject:
@@ -9078,6 +9078,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 5625288305129752008, guid: fc12c66463ed93642ab2e4e0fe274f8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5625288305129752011, guid: fc12c66463ed93642ab2e4e0fe274f8e,
         type: 3}
       propertyPath: m_RootOrder
@@ -9436,13 +9441,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5249496655499344263, guid: 0a37f7d0df03c184aba4e51bd890a54f,
         type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1834045278}
     - target: {fileID: 5633028984454211824, guid: 0a37f7d0df03c184aba4e51bd890a54f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5633028984454211824, guid: 0a37f7d0df03c184aba4e51bd890a54f,
         type: 3}
@@ -9512,21 +9517,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2923013809718358538}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2923013809718358545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2923013809718358539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724c22ff43fd95441be5cadd2fd88d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scene_new: FutureBad
-  transition: {fileID: 1834045278}
-  transtitiontime: 1
 --- !u!1001 &7024373168884713286
 PrefabInstance:
   m_ObjectHideFlags: 0
