@@ -11,43 +11,43 @@ public class BodyguardScript : MainDialgueHandler
     public DialogueTrigger DTrigger;
 
     public GameObject BodyGuard;
-   
 
-    private bool start = true; 
+
+    private bool start = true;
     public override void setUpCondition()
     {
-       
-         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
-        if(start == true)
+        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
+        if (start == true)
         {
             start = false;
             DTrigger.currentDialogue.disableChoice = false;
-            for(int i = 0; i < inventory.slots.Length; i++)
-                {
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
 
-                    if(inventory.isFull[i] == true)
+                if (inventory.isFull[i] == true)
+                {
+                    if (inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "BlueDrink")
                     {
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "BlueDrink")
-                        {
-                            DTrigger.currentDialogue.choiceElement  = 1;
-                            break;
-                        }
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "RedDrink")
-                        {
-                            DTrigger.currentDialogue.choiceElement  = 1;
-                            break;
-                        }
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "GreenDrink")
-                        {
-                            DTrigger.currentDialogue.choiceElement  = 1;
-                            break;
-                        }
-                        
-                        
+                        DTrigger.currentDialogue.choiceElement = 1;
+                        break;
                     }
-                
+                    if (inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "RedDrink")
+                    {
+                        DTrigger.currentDialogue.choiceElement = 1;
+                        break;
+                    }
+                    if (inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "GreenDrink")
+                    {
+                        DTrigger.currentDialogue.choiceElement = 1;
+                        break;
+                    }
+
+
                 }
+
+            }
         }
 
     }
@@ -58,29 +58,29 @@ public class BodyguardScript : MainDialgueHandler
         PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         //Debug.Log(pickUpScript);
-        if(choice == "a")
+        if (choice == "a")
         {
-            if(DTrigger.currentDialogue.converstationElement == 0)
+            if (DTrigger.currentDialogue.converstationElement == 0)
             {
-                DTrigger.currentDialogue.converstationElement  = DTrigger.currentDialogue.converstationElement + 1;
-                DTrigger.currentDialogue.choiceElement =  2;
-                DTrigger.OnMouseDown();            
+                DTrigger.currentDialogue.converstationElement = DTrigger.currentDialogue.converstationElement + 1;
+                DTrigger.currentDialogue.choiceElement = 2;
+                DTrigger.OnMouseDown();
             }
-           else  if(DTrigger.currentDialogue.converstationElement == 1)
-            {
-                DTrigger.currentDialogue.disableChoice = true;
-                start = true;
-                DTrigger.currentDialogue.converstationElement = 0;
-                DTrigger.currentDialogue.choiceElement = 0;
-            }
-            else if(DTrigger.currentDialogue.converstationElement == 2)
+            else if (DTrigger.currentDialogue.converstationElement == 1)
             {
                 DTrigger.currentDialogue.disableChoice = true;
                 start = true;
                 DTrigger.currentDialogue.converstationElement = 0;
                 DTrigger.currentDialogue.choiceElement = 0;
             }
-            else if(DTrigger.currentDialogue.converstationElement == 3)
+            else if (DTrigger.currentDialogue.converstationElement == 2)
+            {
+                DTrigger.currentDialogue.disableChoice = true;
+                start = true;
+                DTrigger.currentDialogue.converstationElement = 0;
+                DTrigger.currentDialogue.choiceElement = 0;
+            }
+            else if (DTrigger.currentDialogue.converstationElement == 3)
             {
                 DTrigger.currentDialogue.disableChoice = true;
                 start = true;
@@ -90,46 +90,46 @@ public class BodyguardScript : MainDialgueHandler
 
         }
 
-        else if(choice == "b")
+        else if (choice == "b")
         {
 
-           if(DTrigger.currentDialogue.converstationElement == 0)
+            if (DTrigger.currentDialogue.converstationElement == 0)
             {
-                DTrigger.currentDialogue.converstationElement  = DTrigger.currentDialogue.converstationElement + 2;
-                DTrigger.currentDialogue.choiceElement =  3;
-                DTrigger.OnMouseDown();            
-            } 
+                DTrigger.currentDialogue.converstationElement = DTrigger.currentDialogue.converstationElement + 2;
+                DTrigger.currentDialogue.choiceElement = 3;
+                DTrigger.OnMouseDown();
+            }
 
-          
-     
-              
-        // DTrigger.currentDialogue.converstationElement  = DTrigger.currentDialogue.converstationElement - 1;   
+
+
+
+            // DTrigger.currentDialogue.converstationElement  = DTrigger.currentDialogue.converstationElement - 1;   
 
         }
 
         else if (choice == "c")
         {
-            if(DTrigger.currentDialogue.converstationElement == 0)
+            if (DTrigger.currentDialogue.converstationElement == 0)
             {
-               
+
                 DTrigger.currentDialogue.converstationElement = 3;
                 DTrigger.currentDialogue.choiceElement = 4;
                 DTrigger.OnMouseDown();
-            }           
+            }
 
         }
-            
+
         else if (choice == "d")
         {
-            if(DTrigger.currentDialogue.converstationElement == 0)
+            if (DTrigger.currentDialogue.converstationElement == 0)
             {
 
-            for(int i = 0; i < inventory.slots.Length; i++)
+                for (int i = 0; i < inventory.slots.Length; i++)
                 {
 
-                    if(inventory.isFull[i] == true)
+                    if (inventory.isFull[i] == true)
                     {
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "BlueDrink")
+                        if (inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "BlueDrink")
                         {
                             DTrigger.currentDialogue.converstationElement = 5;
                             DTrigger.currentDialogue.disableChoice = true;
@@ -141,7 +141,7 @@ public class BodyguardScript : MainDialgueHandler
                             DTrigger.currentDialogue.choiceElement = 0;
                             break;
                         }
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "RedDrink")
+                        if (inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "RedDrink")
                         {
                             DTrigger.currentDialogue.converstationElement = 4;
                             DTrigger.currentDialogue.disableChoice = true;
@@ -152,14 +152,15 @@ public class BodyguardScript : MainDialgueHandler
                             DTrigger.currentDialogue.converstationElement = 0;
                             DTrigger.currentDialogue.choiceElement = 0;
 
-                            BodyGuard.GetComponent<NPCMovement>().conditionToMove = true;
-                            inventory.BodyGuard = true;
+                            //BodyGuard.GetComponent<NPCMovement>().conditionToMove = true;
+                            //inventory.BodyGuard = true;
 
+                            StartCoroutine(MoveBodyguard(inventory));
                             //TOOOOOOOOOOOOOOOOOOOOOOOOOOOODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO SUBRoutine :( </3
 
                             break;
                         }
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "GreenDrink")
+                        if (inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "GreenDrink")
                         {
                             DTrigger.currentDialogue.converstationElement = 5;
                             DTrigger.currentDialogue.disableChoice = true;
@@ -171,16 +172,23 @@ public class BodyguardScript : MainDialgueHandler
                             DTrigger.currentDialogue.choiceElement = 0;
                             break;
                         }
-                        
-                        
-                    }
-                
-                }
-               
 
-            }           
+
+                    }
+
+                }
+
+
+            }
 
         }
-        
+
+    }
+
+    IEnumerator MoveBodyguard(Inventory inventory)
+    {
+        yield return new WaitForSeconds(5);
+        BodyGuard.GetComponent<NPCMovement>().conditionToMove = true;
+        inventory.BodyGuard = true;
     }
 }

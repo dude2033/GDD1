@@ -10,6 +10,7 @@ public class NPCMovement : MonoBehaviour
     private Rigidbody2D myRg;
     private Animator anim;
 
+    public GameObject Bodyguard;
     public bool conditionToMove = false;
 
     private bool startMoving;
@@ -60,5 +61,13 @@ public class NPCMovement : MonoBehaviour
             startMoving = false;
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name != "MainPlayer")
+        {
+            Bodyguard.SetActive(false);
+        }
     }
 }
