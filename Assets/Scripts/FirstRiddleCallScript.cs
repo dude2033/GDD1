@@ -10,7 +10,14 @@ public class FirstRiddleCallScript : MonoBehaviour
     [SerializeField] GameObject Riddle;
 
     [SerializeField] GameObject TeleportButton;
-    void OnMouseDown()
+ /*   void OnMouseDown()
+    {
+        isGamePaused = true;
+        StartRiddle();
+    }
+*/
+
+    public void CustomOnMouseDown()
     {
         isGamePaused = true;
         StartRiddle();
