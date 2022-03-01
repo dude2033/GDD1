@@ -7,29 +7,29 @@ public class TimeMachineScript : MainDialgueHandler
 {
     // Start is called before the first frame update    public DialogueTrigger DTrigger;
     public DialogueTrigger DTrigger;
+
+
+    public Sprite rock;
+    public bool finsihed = false; 
     
     public override void setUpCondition()
     {
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
+        FirstRiddleCallScript script = GameObject.FindObjectOfType<FirstRiddleCallScript>();
         DTrigger.currentDialogue.disableChoice = true;
-        for(int i = 0; i < inventory.slots.Length; i++)
-        {
 
-            if(inventory.isFull[i] == true)
-            {
-                
+        //pickUpScript.pickUp(rock);
 
-                if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "RadioactiveStone2")
-                {
-                    FirstRiddleCallScript script = GameObject.FindObjectOfType<FirstRiddleCallScript>();
-                    script.CustomOnMouseDown();
-                    break;
-                }
-            
-            }
-        
-        }
-           
+           if(Inventory.rockAcq)
+           {
+            DTrigger.currentDialogue.converstationElement =  1;
+            GameObject  [] test  = GameObject.FindGameObjectsWithTag("Slot");
+            test[0].transform.GetChild(0).gameObject.SetActive(false);
+
+            script.CustomOnMouseDown();
+           }
+             
 
 
     }

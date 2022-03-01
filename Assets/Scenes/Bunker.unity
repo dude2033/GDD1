@@ -4452,6 +4452,7 @@ MonoBehaviour:
       - 'The time machine is finished. But it still needs a fuel source. '
       - There should be enough radioactive rocks outside of this bunker that can
         get me into the past. I should go get one.
+    - sentences: []
     disableChoice: 0
     choiceElement: 0
     Choices: []
@@ -4473,6 +4474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DTrigger: {fileID: 917117061}
+  rock: {fileID: 21300000, guid: 2bcda9f65b20f4f4aa08225733d2ab73, type: 3}
+  finsihed: 0
 --- !u!1 &947282640
 GameObject:
   m_ObjectHideFlags: 0
