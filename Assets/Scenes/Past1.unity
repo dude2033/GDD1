@@ -8231,6 +8231,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 5625288305129752008, guid: fc12c66463ed93642ab2e4e0fe274f8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5625288305129752011, guid: fc12c66463ed93642ab2e4e0fe274f8e,
         type: 3}
       propertyPath: m_RootOrder
@@ -11338,6 +11343,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 352599990, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: Bodyguard
+      value: 
+      objectReference: {fileID: 580882897}
+    - target: {fileID: 352599990, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: conditionToMove
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 17
@@ -11486,12 +11499,12 @@ PrefabInstance:
     - target: {fileID: 3738659685083771177, guid: c356cca930c1f9f4bbef8ba98855f236,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.33
+      value: 11.117
       objectReference: {fileID: 0}
     - target: {fileID: 3738659685083771177, guid: c356cca930c1f9f4bbef8ba98855f236,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.21
+      value: 1.691
       objectReference: {fileID: 0}
     - target: {fileID: 3738659685083771177, guid: c356cca930c1f9f4bbef8ba98855f236,
         type: 3}
@@ -11541,7 +11554,7 @@ PrefabInstance:
     - target: {fileID: 3738659685083771178, guid: c356cca930c1f9f4bbef8ba98855f236,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: BodyGuard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
@@ -11893,7 +11906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0216c28804ab824ebdd831ccea4a274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Image: {fileID: 0}
   DTrigger: {fileID: 707250502}
 --- !u!114 &765529529
 MonoBehaviour:
@@ -20750,6 +20762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982422891381334920, guid: 0a37f7d0df03c184aba4e51bd890a54f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a37f7d0df03c184aba4e51bd890a54f, type: 3}
