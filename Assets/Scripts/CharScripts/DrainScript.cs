@@ -15,56 +15,49 @@ public class DrainScript : MainDialgueHandler
     {
      
 
-            Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-            DTrigger.currentDialogue.disableChoice = true;
-            finsihed = false;
+        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        DTrigger.currentDialogue.disableChoice = true;
+        finsihed = false;
 
-            for(int i = 0; i < inventory.slots.Length; i++)
+        for(int i = 0; i < inventory.slots.Length; i++)
+            {
+
+                if(inventory.isFull[i] == true)
                 {
-
-                    if(inventory.isFull[i] == true)
+                    
+    
+                    if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "Coin")
                     {
-                        
-
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "WoodStick")
-                        {
-                            DTrigger.currentDialogue.converstationElement  = 1;
-                            break;
-                        }
-
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "ChewedChewingGumOnStick")
-                        {
-                            DTrigger.currentDialogue.converstationElement  = 2;
-                            break;
-                        }
-
+                        finsihed = true;
+                        break;
                     }
                 
-                }
-                            
-                for(int i = 0; i < inventory.slots.Length; i++)
-                {
-
-                    if(inventory.isFull[i] == true)
+                    if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "WoodStick")
                     {
-                        
-                        if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "Coin")
-                        {
-                            finsihed = true;
-                            break;
-                        }
-
+                        DTrigger.currentDialogue.converstationElement  = 1;
+                        break;
                     }
-                
+
+                    if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "ChewedChewingGumOnStick")
+                    {
+                        DTrigger.currentDialogue.converstationElement  = 2;
+                        PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
+                        if(finsihed == false) 
+                        {           
+                                Debug.Log("in drain ;)");         
+                                pickUpScript.pickUp(Image);
+                                finsihed = true;
+                        }
+                        break;
+                    }
+
                 }
+            
+            }
+                        
+
         
-       PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
-        if(finsihed == false) 
-        {           
-                Debug.Log("in drain ;)");         
-                pickUpScript.pickUp(Image);
-                finsihed = true;
-        }
+
     }
 
     public override void executeFunction(string choice)

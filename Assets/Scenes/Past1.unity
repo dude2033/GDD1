@@ -11729,6 +11729,7 @@ GameObject:
   - component: {fileID: 707250499}
   - component: {fileID: 707250498}
   - component: {fileID: 707250502}
+  - component: {fileID: 707250503}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -11856,7 +11857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogue:
-    name: Bodyguard
+    name: Door
     converstationElement: 0
     Conversation:
     - sentences:
@@ -11867,6 +11868,7 @@ MonoBehaviour:
       - Now which folder should I replace?
     - sentences:
       - Absolutely not! Please leave!
+    - sentences: []
     disableChoice: 0
     choiceElement: 0
     Choices:
@@ -11878,7 +11880,21 @@ MonoBehaviour:
   DialoagIsActive: 0
   ChoiceIsSet: 0
   choice: 
-  script: {fileID: 580882899}
+  script: {fileID: 707250503}
+--- !u!114 &707250503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707250497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0216c28804ab824ebdd831ccea4a274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 0}
+  DTrigger: {fileID: 707250502}
 --- !u!114 &765529529
 MonoBehaviour:
   m_ObjectHideFlags: 0
