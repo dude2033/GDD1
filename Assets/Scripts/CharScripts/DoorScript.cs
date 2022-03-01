@@ -24,7 +24,7 @@ public class DoorScript : MainDialgueHandler
     public override void setUpCondition()
     {
        
-         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
         if(inventory.BodyGuard == false)
         {
