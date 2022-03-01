@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour
 
     public bool BodyGuard = false;
 
+    public static bool rockAcq = false;
+
     public void setGameObjectVisible(int position)
     {
         slots[position].SetActive(true);

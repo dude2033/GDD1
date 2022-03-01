@@ -11880,7 +11880,7 @@ MonoBehaviour:
       - "And there is the Folder\u2026\u2026 "
       - Now which folder should I replace?
     - sentences:
-      - Absolutely not! Please leave!
+      - Now I should be able to go back to the future!
     - sentences: []
     disableChoice: 0
     choiceElement: 0

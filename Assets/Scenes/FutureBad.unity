@@ -19089,6 +19089,9 @@ GameObject:
   - component: {fileID: 847233466}
   - component: {fileID: 847233465}
   - component: {fileID: 847233464}
+  - component: {fileID: 847233469}
+  - component: {fileID: 847233468}
+  - component: {fileID: 847233470}
   m_Layer: 0
   m_Name: isometric_0041
   m_TagString: Untagged
@@ -19206,6 +19209,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &847233468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847233463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbf75b672d255445b7017d47db3c31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &847233469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847233463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Player
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - This should do it!!
+    disableChoice: 0
+    choiceElement: 0
+    Choices: []
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 847233470}
+--- !u!114 &847233470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847233463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab227cabde7e0045afe9897087c6bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DTrigger: {fileID: 847233469}
+  rock: {fileID: 21300000, guid: 2bcda9f65b20f4f4aa08225733d2ab73, type: 3}
 --- !u!1 &937282199
 GameObject:
   m_ObjectHideFlags: 0

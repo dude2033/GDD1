@@ -15,6 +15,8 @@ public class DoorScript : MainDialgueHandler
 
     GameObject SceneObject;
 
+    private bool finished = false; 
+
 
     void Awake()
     {
@@ -26,8 +28,6 @@ public class DoorScript : MainDialgueHandler
 
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
-        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-
         if (inventory.BodyGuard == false)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().enabled = false;
@@ -36,9 +36,13 @@ public class DoorScript : MainDialgueHandler
         }
         else
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().enabled = false;
-            DTrigger.currentDialogue.converstationElement = 0;
-            DTrigger.currentDialogue.disableChoice = false;
+            if(!finished)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().enabled = false;
+                DTrigger.currentDialogue.converstationElement = 0;
+                DTrigger.currentDialogue.disableChoice = false;
+            }
+
         }
 
 
@@ -77,14 +81,12 @@ public class DoorScript : MainDialgueHandler
 
             DTrigger.currentDialogue.converstationElement = DTrigger.currentDialogue.converstationElement + 1;
             DTrigger.currentDialogue.disableChoice = true;
+            finished = true;
             DTrigger.OnMouseDown();
 
             //TODO subroutine 
-
+           
             StartCoroutine(LoadBunker());
-
-
-
         }
 
 
@@ -92,7 +94,7 @@ public class DoorScript : MainDialgueHandler
 
     IEnumerator LoadBunker()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         SceneHandler.LoadNewMap("Bunker");
     }
 
