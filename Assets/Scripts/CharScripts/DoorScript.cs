@@ -26,6 +26,8 @@ public class DoorScript : MainDialgueHandler
 
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
+        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
         if (inventory.BodyGuard == false)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().enabled = false;
