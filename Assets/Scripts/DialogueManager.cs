@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> currentDialog;
     private Queue<string> currentChoises;
 
-
+    private int choiceCounter;
     DialogueTrigger DialogueTrigger;
 
     void Start()
@@ -38,24 +38,33 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger)
     {
        
-       animator.SetBool("IsOpen", true);
+        animator.SetBool("IsOpen", true);
         nameObject.text = dialogue.name;
         currentDialog.Clear();
         currentChoises.Clear();
-
+        choiceCounter = 0;
         DialogueTrigger = trigger;
 
-        foreach(string sentence in dialogue.Conversation[dialogue.converstationPosition].sentences)
+
+        
+
+       // Debug.Log("DIA ELEMENT");
+       // Debug.Log(dialogue.converstationElement);
+        foreach(string sentence in dialogue.Conversation[dialogue.converstationElement].sentences)
         {
             currentDialog.Enqueue(sentence);
 
         }
 
-        foreach(string choise in dialogue.choises)
-        {
-            currentChoises.Enqueue(choise);
 
-        }
+        if(dialogue.disableChoice == false) 
+            foreach(string choise in dialogue.Choices[dialogue.choiceElement].choices)
+            {
+                Debug.Log(choise);
+                currentChoises.Enqueue(choise);
+                choiceCounter++;
+
+            }
         
 
         DisplayNext();
@@ -68,8 +77,8 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
 
-            if(currentChoises.Count != 0)
-                showChoises();
+            if(currentChoises.Count != 0 && DialogueTrigger.currentDialogue.disableChoice == false)
+                showChoices();
 
             return;
 
@@ -99,11 +108,11 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        Debug.Log("Finsihed");
+        //Debug.Log("Finsihed");
     }
 
 
-    void showChoises()
+    void showChoices()
     {
         GameObject dialogeChoises  = GameObject.FindGameObjectWithTag("DialogueChoises");
         dialogeChoises.transform.GetChild(0).gameObject.SetActive(true);
@@ -112,14 +121,14 @@ public class DialogueManager : MonoBehaviour
 
         for(int i= 0; i < currentChoises.Count; i++)
         {
-            Debug.Log("i");
-            Debug.Log(i );
+            //Debug.Log("i");
+            //Debug.Log(i );
             dialogeChoises.transform.GetChild(0).gameObject.transform.GetChild(i).gameObject.SetActive(true);
            
         }
             
-        Debug.Log("Choises count");
-        Debug.Log(currentChoises.Count );
+      //  Debug.Log("Choises count");
+        //Debug.Log(currentChoises.Count );
 
         choiseA.text = currentChoises.Dequeue();
         if(currentChoises.Count != 0)
@@ -131,18 +140,20 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    void hideChoises()
+    void hideChoices()
     {
         GameObject dialogeChoises  = GameObject.FindGameObjectWithTag("DialogueChoises");
+        Debug.Log("pre hide");
         dialogeChoises.transform.GetChild(0).gameObject.SetActive(false);
-
-        for(int i= 0; i < currentChoises.Count; i++)
+        Debug.Log("in hide choices");
+        Debug.Log(choiceCounter);
+        for(int i = 0; i < choiceCounter; i++)
         {
-            Debug.Log("i");
-            Debug.Log(i );
-            dialogeChoises.transform.GetChild(0).gameObject.transform.GetChild(i).gameObject.SetActive(false);
-           
+            //Debug.Log("in for");
+            //Debug.Log(i );
+            dialogeChoises.transform.GetChild(0).gameObject.transform.GetChild(i).gameObject.SetActive(false);   
         }
+        choiceCounter = 0;
     }
 
 
@@ -150,30 +161,30 @@ public class DialogueManager : MonoBehaviour
     public void pressedA()
     {
         Debug.Log("A is pressed");
-        DialogueTrigger.ChoiseIsSet = true;
-        DialogueTrigger.choise = "a";
-        hideChoises();
+        DialogueTrigger.ChoiceIsSet = true;
+        DialogueTrigger.choice = "a";
+        hideChoices();
 
     }
     public void pressedB()
     {
         Debug.Log("B is pressed");
-        DialogueTrigger.ChoiseIsSet = true;
-        DialogueTrigger.choise = "b";
-        hideChoises();
+        DialogueTrigger.ChoiceIsSet = true;
+        DialogueTrigger.choice = "b";
+        hideChoices();
     }
     public void pressedC()
     {
         Debug.Log("C is pressed");
-        DialogueTrigger.ChoiseIsSet = true;
-        DialogueTrigger.choise = "c";
-        hideChoises();
+        DialogueTrigger.ChoiceIsSet = true;
+        DialogueTrigger.choice = "c";
+        hideChoices();
     }
     public void presseD()
     {
         Debug.Log("D is pressed");
-        DialogueTrigger.ChoiseIsSet = true;
-        DialogueTrigger.choise = "d";
-        hideChoises();
+        DialogueTrigger.ChoiceIsSet = true;
+        DialogueTrigger.choice = "d";
+        hideChoices();
     }
 }

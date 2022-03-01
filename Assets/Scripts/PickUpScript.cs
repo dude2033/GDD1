@@ -1,41 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUpScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
     private Inventory inventory;
-    public GameObject item;
-
-    void Start()
-    {
-      
+    private void Start() {
+        
     }
 
-    // Update is called once per frame
-/*    private void OnTriggerEnter2D(Collider2D other) 
+   // public GameObject item;
+    public void pickUp(Sprite image) 
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         inventory.slots = GameObject.FindGameObjectsWithTag("Slot");
-        Debug.Log("here");
-        Debug.Log(inventory.slots.Length);
+      //  Debug.Log("here");
+       // Debug.Log(inventory.slots.Length);
+       // Debug.Log("Test");
 
-        Debug.Log("Test");
-        if(other.CompareTag("Player"))
-        {
             for(int i = 0; i < inventory.slots.Length; i++)
             {
-
-                Debug.Log(inventory.slots[i]);
+            //    Debug.Log(i);
+                
+              //  Debug.Log(inventory.isFull.Length);
                 if(inventory.isFull[i] == false)
                 {
-                     inventory.isFull[i] = true;
-
-                     Instantiate(item, inventory.slots[i].transform, false);
-
-                     Destroy(gameObject);
+                    inventory.isFull[i] = true;
+                    inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite = image;
+                    inventory.slots[i].transform.GetChild(0).GetComponent<Image>().gameObject.SetActive(true);
                      break;
                 }
                
@@ -43,6 +38,6 @@ public class PickUpScript : MonoBehaviour
                 
         
 
-        }
-    }*/
+        
+    }
 }

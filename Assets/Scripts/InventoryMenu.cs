@@ -7,7 +7,8 @@ public class InventoryMenu : MonoBehaviour
     // Start is called before the first frame update
 
    public GameObject test;
-    private void Start() {
+    private void Start() 
+    {
         
         test = GameObject.FindGameObjectWithTag("Inventory");
 
