@@ -13,6 +13,8 @@ public class Inventory : MonoBehaviour
 
     public bool chewStickch = false;
 
+    public bool BodyGuard = false;
+
     public void setGameObjectVisible(int position)
     {
         slots[position].SetActive(true);

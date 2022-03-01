@@ -153,6 +153,9 @@ public class BodyguardScript : MainDialgueHandler
                             DTrigger.currentDialogue.choiceElement = 0;
 
                             BodyGuard.GetComponent<NPCMovement>().conditionToMove = true;
+                            inventory.BodyGuard = true;
+
+                            //TOOOOOOOOOOOOOOOOOOOOOOOOOOOODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO SUBRoutine :( </3
 
                             break;
                         }
