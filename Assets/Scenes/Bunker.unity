@@ -264,6 +264,8 @@ GameObject:
   - component: {fileID: 186438862}
   - component: {fileID: 186438863}
   - component: {fileID: 186438864}
+  - component: {fileID: 186438866}
+  - component: {fileID: 186438865}
   m_Layer: 0
   m_Name: tile_terminal_2
   m_TagString: Untagged
@@ -387,7 +389,6 @@ MonoBehaviour:
     Conversation:
     - sentences:
       - 'You have one reminder: go to the past to save the future.'
-    - sentences:
       - You are supposed to change the speech of an important politician so that
         they advocate for more sustainable development to stop all the disasters
         from happening.
@@ -398,7 +399,7 @@ MonoBehaviour:
   DialoagIsActive: 0
   ChoiceIsSet: 0
   choice: 
-  script: {fileID: 0}
+  script: {fileID: 186438865}
 --- !u!61 &186438863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -435,6 +436,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbc16b71c0537db48ae0a6aea57c003a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &186438865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186438858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233e8869fc9c1784ca564ae07d530f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DTrigger: {fileID: 186438862}
+--- !u!114 &186438866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186438858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbf75b672d255445b7017d47db3c31d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &268478075
@@ -4261,6 +4287,9 @@ GameObject:
   - component: {fileID: 917117056}
   - component: {fileID: 917117058}
   - component: {fileID: 917117059}
+  - component: {fileID: 917117061}
+  - component: {fileID: 917117060}
+  - component: {fileID: 917117062}
   m_Layer: 0
   m_Name: tile_ai2
   m_TagString: Untagged
@@ -4391,6 +4420,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc16b71c0537db48ae0a6aea57c003a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &917117060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917117054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbf75b672d255445b7017d47db3c31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &917117061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917117054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Terminal
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - 'The time machine is finished. But it still needs a fuel source. '
+      - There should be enough radioactive rocks outside of this bunker that can
+        get me into the past. I should go get one.
+    disableChoice: 0
+    choiceElement: 0
+    Choices: []
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 917117062}
+--- !u!114 &917117062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917117054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90b99d63b7bcad4aa081ed369795fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DTrigger: {fileID: 917117061}
 --- !u!1 &947282640
 GameObject:
   m_ObjectHideFlags: 0

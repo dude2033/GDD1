@@ -5,19 +5,19 @@ using UnityEngine;
 public class RobotTestScript : MainDialgueHandler
 {
 
-    public DialogueTrigger testTrigger;
+    public DialogueTrigger DTrigger;
 
     public override void setUpCondition()
     {
-        
+        DTrigger.currentDialogue.disableChoice = true;
     }
     public override void executeFunction(string choise)
     {
         if(choise == "a")
         {
             Debug.Log("it works fine though");
-            testTrigger.currentDialogue.converstationElement  = testTrigger.currentDialogue.converstationElement + 1;
-            testTrigger.OnMouseDown();
+            //DTrigger.currentDialogue.converstationElement  = DTrigger.currentDialogue.converstationElement + 1;
+            DTrigger.OnMouseDown();
 
 
         }
