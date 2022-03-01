@@ -26,6 +26,8 @@ public class DialogueTrigger : MonoBehaviour
         {
             script.executeFunction(choice);
             choice = "";
+            ChoiceIsSet = false;
+            //Debug.Log("how deep can u go");
             
            // test.testFunction();
             //TODO: set script event here

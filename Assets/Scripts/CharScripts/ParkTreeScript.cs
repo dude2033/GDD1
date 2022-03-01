@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +16,7 @@ public class ParkTreeScript : MainDialgueHandler
     {
 
        PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
-        Debug.Log(pickUpScript);
+        //Debug.Log(pickUpScript);
         if(choice == "a")
         {
             Debug.Log("teee here");

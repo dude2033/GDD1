@@ -11083,6 +11083,8 @@ GameObject:
   - component: {fileID: 460676090}
   - component: {fileID: 460676093}
   - component: {fileID: 460676092}
+  - component: {fileID: 460676094}
+  - component: {fileID: 460676095}
   m_Layer: 0
   m_Name: Drain
   m_TagString: Untagged
@@ -11201,6 +11203,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc16b71c0537db48ae0a6aea57c003a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &460676094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460676089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Rain Gutter
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - "There is some money down there but I can\u2019t reach it. If only I had
+        a stick of some kind. "
+    - sentences:
+      - "I can push the coins around down there but I can\u2019t get them up. I need
+        to make them stick to the stick."
+    - sentences:
+      - " Okey let\u2019s do this!!"
+      - " \u2026.. \u2026\u2026\u2026\u2026 "
+      - " \u2026\u2026\u2026\u2026\u2026.. \u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026."
+    disableChoice: 0
+    choiceElement: 0
+    Choices: []
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 460676095}
+--- !u!114 &460676095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460676089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba654034376733c489e5a84a76eada6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 21300000, guid: 4d9938a1584f45b4380374e4e680485c, type: 3}
+  DTrigger: {fileID: 460676094}
 --- !u!1001 &554361532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11210,111 +11260,143 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: -0.08678627
+      value: 0.4046967
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
-      value: 1.2062283
+      value: -0.049665093
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -0.088305265
+      value: 0.28132567
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: 1.2408266
+      value: -0.10261989
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: -0.4533297
+      value: 0.07530075
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: 1.1731868
+      value: -0.06801987
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: -0.43832874
+      value: -0.14840901
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -1.0682087
+      value: -0.014016032
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
-      value: -0.49406815
+      value: -0.35107356
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
-      value: -1.1589212
+      value: -0.13566062
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
-      value: -0.41159153
+      value: -0.43832874
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
-      value: -1.3703527
+      value: -1.0682087
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x
-      value: -0.28823566
+      value: -0.49406815
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
-      value: -1.3823175
+      value: -1.1589212
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
-      value: 0.034023285
+      value: -0.41159153
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
-      value: -1.4301825
+      value: -1.3703527
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
-      value: 0.27868176
+      value: -0.28823566
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
-      value: -1.4102049
+      value: -1.3823175
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
-      value: 0.30584908
+      value: 0.034023285
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].y
-      value: -1.3999119
+      value: -1.4301825
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
-      value: 0.5174036
+      value: 0.27868176
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
-      value: -1.3197632
+      value: -1.4102049
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].x
-      value: 0.50890446
+      value: 0.30584908
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].y
-      value: -1.2238188
+      value: -1.3999119
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].x
-      value: 0.41369882
+      value: 0.5174036
       objectReference: {fileID: 0}
     - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].y
-      value: 1.1391103
+      value: -1.3197632
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[13].x
+      value: 0.50890446
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[13].y
+      value: -1.2238188
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[14].x
+      value: 0.41927838
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[14].y
+      value: -0.38996398
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[15].x
+      value: 0.40137786
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[15].y
+      value: -0.2859037
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[16].x
+      value: 0.06603682
+      objectReference: {fileID: 0}
+    - target: {fileID: 590199706, guid: c356cca930c1f9f4bbef8ba98855f236, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[16].y
+      value: -0.047033317
       objectReference: {fileID: 0}
     - target: {fileID: 3738659685083771177, guid: c356cca930c1f9f4bbef8ba98855f236,
         type: 3}
@@ -11470,6 +11552,78 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 554361532}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &580882898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580882897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Bodyguard
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - 'It sure is hot today. '
+    - sentences:
+      - Absolutely not! Please leave!
+    - sentences:
+      - " I could use a drink. But like my employer I only like red things and all
+        I have is a blue water bottle.\r"
+    - sentences:
+      - 'I am protecting the entrance to this house that my employer has chosen to
+        leave his important belongings in for the moment. '
+      - "He will have an important speech later!\r"
+    - sentences:
+      - 'That is awfully nice of you. I was suffering in this heat! '
+      - "\u2026. *glug glug glug* \u2026.. \u2026\u2026 \u2026\u2026\u2026. \u2026\u2026\u2026\u2026\u2026.. "
+      - Could you wait here for a second? I have to go somewhere.
+    - sentences:
+      - "That is very nice, unfortunately I can\u2019t drink that. I only like red
+        things like my employer."
+    disableChoice: 0
+    choiceElement: 0
+    Choices:
+    - choices:
+      - Could you let me inside of this building?
+      - ' Do you need something?'
+      - What are you doing here?
+    - choices:
+      - Could you let me inside of this building?
+      - Do you need something?
+      - What are you doing here?
+      - I have a drink for you!
+    - choices:
+      - Okay!
+    - choices:
+      - "I\u2019ll see what I can do!"
+    - choices:
+      - I see.
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 580882899}
+--- !u!114 &580882899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580882897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f159f28ca22f014aa411b38beaebec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 0}
+  DTrigger: {fileID: 580882898}
+  BodyGuard: {fileID: 580882897}
 --- !u!114 &580882904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11494,6 +11648,7 @@ GameObject:
   - component: {fileID: 707250500}
   - component: {fileID: 707250499}
   - component: {fileID: 707250498}
+  - component: {fileID: 707250502}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -11608,6 +11763,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707250502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707250497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8434d6fe39bc941a659e8cda8afd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogue:
+    name: Bodyguard
+    converstationElement: 0
+    Conversation:
+    - sentences:
+      - "Okay\u2026\u2026"
+      - "let\u2019s see\u2026\u2026 "
+      - "Here is the room\u2026\u2026"
+      - "And there is the Folder\u2026\u2026 "
+      - Now which folder should I replace?
+    - sentences:
+      - Absolutely not! Please leave!
+    disableChoice: 0
+    choiceElement: 0
+    Choices:
+    - choices:
+      - The red one
+      - The green one.
+      - The blue one.
+  StartDialogueBool: 0
+  DialoagIsActive: 0
+  ChoiceIsSet: 0
+  choice: 
+  script: {fileID: 580882899}
 --- !u!114 &765529529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17626,8 +17817,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bb91a75c42d1244b936f1dedbbf9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DTrigger: {fileID: 0}
-  Image: {fileID: 0}
+  DTrigger: {fileID: 1214461618}
+  ImageA: {fileID: 21300000, guid: f55f8c6e11dfaa34ea93e38e64504eb2, type: 3}
+  ImageB: {fileID: 21300000, guid: ff74c057f2ad1064283eb95243584775, type: 3}
+  ImageC: {fileID: 21300000, guid: 94e3ce6a068b06542af4d60e0e8e7791, type: 3}
+  Coin: {fileID: 21300000, guid: 4d9938a1584f45b4380374e4e680485c, type: 3}
 --- !u!1 &1223884199
 GameObject:
   m_ObjectHideFlags: 0
@@ -31700,7 +31894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cc5bddb1fba384b96c38a40dcd6467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: cd982209747a3fe43b725f893052bdf1, type: 3}
   DTrigger: {fileID: 2142328674}
 --- !u!114 &2142328674
 MonoBehaviour:

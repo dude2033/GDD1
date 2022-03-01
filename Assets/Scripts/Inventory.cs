@@ -8,7 +8,10 @@ public class Inventory : MonoBehaviour
     public GameObject[] slots;
     public bool[] isFull;
 
+    public bool stickch = false;
+    public bool chew = false;
 
+    public bool chewStickch = false;
 
     public void setGameObjectVisible(int position)
     {
