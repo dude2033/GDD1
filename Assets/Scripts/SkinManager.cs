@@ -46,7 +46,7 @@ public class SkinManager : MonoBehaviour
     public void PlayGame()
     {
         PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/Prefabs/SelectSkin.prefab");
-        StartCoroutine(LoadLevel("Bunker"));
+        StartCoroutine(LoadLevel("ExplanationScene"));
     }
 
     IEnumerator LoadLevel(string Scene)
