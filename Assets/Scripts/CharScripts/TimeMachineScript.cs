@@ -25,8 +25,8 @@ public class TimeMachineScript : MainDialgueHandler
            {
             DTrigger.currentDialogue.converstationElement =  1;
             GameObject  [] test  = GameObject.FindGameObjectsWithTag("Slot");
-            test[0].transform.GetChild(0).gameObject.SetActive(false);
-
+            //test[3].transform.GetChild(0).gameObject.SetActive(false);    
+            Destroy(test[3]);
             script.CustomOnMouseDown();
            }
              
