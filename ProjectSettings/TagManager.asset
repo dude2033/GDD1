@@ -9,6 +9,7 @@ TagManager:
   - Inventory
   - DialogueChoises
   - BodyGuard
+  - SoundManager
   layers:
   - Default
   - TransparentFX

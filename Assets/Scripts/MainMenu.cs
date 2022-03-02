@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour
 
     public Animator transition;
 
+    GameObject SoundManagerObject;
+    SoundManagerScript SoundManager;
+
     public float transtitiontime = 1f;
     void Start()
     {
@@ -27,6 +30,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneObject = GameObject.FindGameObjectWithTag("Loader");
         SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
+        SoundManagerObject = GameObject.FindGameObjectWithTag("SoundManager");
+        SoundManager = SoundManagerObject.GetComponent<SoundManagerScript>();
     }
     public void StartGame(string Scene)
     {
@@ -52,6 +57,7 @@ public class MainMenu : MonoBehaviour
     public void Past(string Scene)
     {
         Time.timeScale = 1f;
+        SoundManager.ChangeSound("Past");
         StartCoroutine(LoadLevel(Scene));
     }
 

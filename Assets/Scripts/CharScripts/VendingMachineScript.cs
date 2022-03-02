@@ -19,7 +19,8 @@ public class VendingMachineScript : MainDialgueHandler
 
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
-       // pickUpScript.pickUp(Coin);
+       //pickUpScript.pickUp(Coin);
+
 
         if(finsihed == false)
         {
@@ -55,7 +56,7 @@ public class VendingMachineScript : MainDialgueHandler
   
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
-        Debug.Log("testestst");
+        //Debug.Log("testestst");
         for(int i = 0; i < inventory.slots.Length; i++)
         {
 

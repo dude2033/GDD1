@@ -15,6 +15,9 @@ public class DoorScript : MainDialgueHandler
 
     GameObject SceneObject;
 
+    GameObject SoundManagerObject;
+    SoundManagerScript SoundManager;
+
     private bool finished = false; 
 
 
@@ -22,6 +25,9 @@ public class DoorScript : MainDialgueHandler
     {
         SceneObject = GameObject.FindGameObjectWithTag("Loader");
         SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
+        SoundManagerObject = GameObject.FindGameObjectWithTag("SoundManager");
+        SoundManager = SoundManagerObject.GetComponent<SoundManagerScript>();
+    
     }
     public override void setUpCondition()
     {
@@ -95,6 +101,7 @@ public class DoorScript : MainDialgueHandler
     IEnumerator LoadBunker()
     {
         yield return new WaitForSeconds(2);
+        SoundManager.ChangeSound("Bunker");
         SceneHandler.LoadNewMap("Bunker");
     }
 

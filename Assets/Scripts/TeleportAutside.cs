@@ -13,6 +13,9 @@ public class TeleportAutside : MonoBehaviour
     GameObject SceneObject;
     public Animator transition;
 
+    GameObject SoundManagerObject;
+    SoundManagerScript SoundManager;
+
     public float transtitiontime = 1f;
 
 
@@ -20,6 +23,8 @@ public class TeleportAutside : MonoBehaviour
     {
         SceneObject = GameObject.FindGameObjectWithTag("Loader");
         SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
+        SoundManagerObject = GameObject.FindGameObjectWithTag("SoundManager");
+        SoundManager = SoundManagerObject.GetComponent<SoundManagerScript>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -41,6 +46,8 @@ public class TeleportAutside : MonoBehaviour
 
         yield return new WaitForSeconds(transtitiontime);
 
+        SoundManager.ChangeSound("Bunker");
+
         SceneHandler.LoadNewMap("Bunker");
     }
 
@@ -55,15 +62,18 @@ public class TeleportAutside : MonoBehaviour
             if (fromPast)
             {
                 Debug.Log("fromPast");
+                SoundManager.ChangeSound("FutureBad");
                 SceneHandler.LoadNewMap("FutureBad");
             }
             else
             {
+                SoundManager.ChangeSound("FutureBad");
                 SceneHandler.LoadNewMap("FutureBad");
             }
         }
         else if (isGoodFuture)
         {
+            SoundManager.ChangeSound("FutureGood");
             SceneHandler.LoadNewMap("FutureGood");
         }
     }

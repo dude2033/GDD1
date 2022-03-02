@@ -9,12 +9,12 @@ public class KidScript : MainDialgueHandler
     public Sprite Image;
     public DialogueTrigger DTrigger;
 
-    private bool finsihed;
+    private bool finished;
 
     public override void setUpCondition()
     {
      
-        if(finsihed == false) 
+        if(finished == false) 
         {
             Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
@@ -45,7 +45,7 @@ public class KidScript : MainDialgueHandler
     public override void executeFunction(string choice)
     {
 
-        if(finsihed == false)
+        if(finished == false)
         {
             PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
             //Debug.Log(pickUpScript);
@@ -74,7 +74,7 @@ public class KidScript : MainDialgueHandler
                             if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "TeddyBear")
                             {
                                 inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite = Image;
-                                finsihed = true;
+                                finished = true;
                                 break;
                             }
                             
