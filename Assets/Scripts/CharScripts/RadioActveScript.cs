@@ -12,13 +12,19 @@ public class RadioActveScript : MainDialgueHandler
     public override void setUpCondition()
     {
 
+        GameObject [] slots = GameObject.FindGameObjectsWithTag("Slot");
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
 
         DTrigger.currentDialogue.disableChoice = true;  
 
         if(!Inventory.rockAcq)
-            for(int i = 0; i < inventory.slots.Length; i++)
+        {
+            slots[slots.Length-1].transform.GetChild(0).GetComponent<Image>().sprite = rock;
+            slots[slots.Length-1].transform.GetChild(0).GetComponent<Image>().gameObject.SetActive(true);
+            Inventory.rockAcq = true;
+        }
+         /*   for(int i = 0; i < inventory.slots.Length; i++)
             {
 
                 if(inventory.isFull[i] == false)
@@ -29,7 +35,7 @@ public class RadioActveScript : MainDialgueHandler
                     break;
                 }
                 
-            }
+            }*/
 
 
     }

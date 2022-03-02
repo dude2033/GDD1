@@ -20999,6 +20999,11 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 24691942}
+    - target: {fileID: 2923013809718358541, guid: 0a37f7d0df03c184aba4e51bd890a54f,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3673205175246894999, guid: 0a37f7d0df03c184aba4e51bd890a54f,
         type: 3}
       propertyPath: m_Sprite
