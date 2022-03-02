@@ -18,6 +18,15 @@ public class DrainScript : MainDialgueHandler
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         DTrigger.currentDialogue.disableChoice = true;
         finsihed = false;
+        for(int i = 0; i < inventory.slots.Length; i++)
+        {
+            if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "Coin")
+                {
+                    finsihed = true;
+                    break;
+                }
+        }
+
 
         for(int i = 0; i < inventory.slots.Length; i++)
             {

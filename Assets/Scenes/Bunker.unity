@@ -13543,7 +13543,7 @@ MonoBehaviour:
     - sentences:
       - Sqeek....squeek...!
       - Squeek!
-    disableChoice: 0
+    disableChoice: 1
     choiceElement: 0
     Choices: []
   StartDialogueBool: 0
