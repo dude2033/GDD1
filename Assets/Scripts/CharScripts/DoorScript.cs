@@ -101,6 +101,7 @@ public class DoorScript : MainDialgueHandler
     IEnumerator LoadBunker()
     {
         yield return new WaitForSeconds(2);
+        SoundManager.ChangeSound("Bunker");
         SceneHandler.LoadNewMap("Bunker");
     }
 
