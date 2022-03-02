@@ -1052,6 +1052,7 @@ MonoBehaviour:
   Past: {fileID: 8300000, guid: 6df03936cf90cfd4dbbdb9cc8e064370, type: 3}
   FutureGood: {fileID: 8300000, guid: 8f3563003396dae4cace1324c38699a7, type: 3}
   FutureBad: {fileID: 8300000, guid: 133921bf9fcb7064baa3471785cda397, type: 3}
+  VolumeSlider: {fileID: 1325837766}
 --- !u!1 &760103036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1843,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248593558}
   m_CullTransparentMesh: 0
+--- !u!114 &1325837766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7485561206889130468, guid: dedf58ec2b87835458a3073c92c1a9a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1535619852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1363986224
 GameObject:
   m_ObjectHideFlags: 0
