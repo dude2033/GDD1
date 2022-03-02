@@ -14,6 +14,10 @@ public class TextFadeScript : MonoBehaviour
 
     GameObject SceneObject;
 
+    GameObject SoundManagerObject;
+
+    SoundManagerScript SoundManager;
+
     public Animator transition;
 
     public float transtitiontime = 1f;
@@ -21,7 +25,9 @@ public class TextFadeScript : MonoBehaviour
     void Awake()
     {
         SceneObject = GameObject.FindGameObjectWithTag("Loader");
+        SoundManagerObject = GameObject.FindGameObjectWithTag("SoundManager");
         SceneHandler = SceneObject.GetComponent<SceneManagerScript>();
+        SoundManager = SoundManagerObject.GetComponent<SoundManagerScript>();
     }
 
 
@@ -71,6 +77,8 @@ public class TextFadeScript : MonoBehaviour
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transtitiontime);
+
+        SoundManager.ChangeSound("Bunker");
 
         SceneHandler.LoadNewMap(Scene);
     }
