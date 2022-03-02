@@ -23,10 +23,17 @@ public class TimeMachineScript : MainDialgueHandler
 
            if(Inventory.rockAcq)
            {
-            DTrigger.currentDialogue.converstationElement =  1;
-            GameObject  [] test  = GameObject.FindGameObjectsWithTag("Slot");
-            //test[3].transform.GetChild(0).gameObject.SetActive(false);    
-            Destroy(test[3]);
+               if(!finsihed)
+               {
+                DTrigger.currentDialogue.converstationElement =  1;
+                GameObject  [] test  = GameObject.FindGameObjectsWithTag("Slot");
+                //test[3].transform.GetChild(0).gameObject.SetActive(false);    
+                finsihed = true;
+                if(test.Length  == 4)
+                    Destroy(test[3]);
+               }
+
+
             script.CustomOnMouseDown();
            }
              
