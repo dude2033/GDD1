@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameManger : MonoBehaviour
 {
-    public GameObject SelectedSkin;
+    public GameObject SelectedSkin_men;
+
+    public GameObject SelectedSkin_women;
     public GameObject Player;
     private Sprite PlayerSprite;
 
@@ -13,7 +15,15 @@ public class GameManger : MonoBehaviour
 
     void Start()
     {
-        PlayerSprite = SelectedSkin.GetComponent<SpriteRenderer>().sprite;
+        if (SkinManager.isMen == true)
+        {
+            PlayerSprite = SelectedSkin_men.GetComponent<SpriteRenderer>().sprite;
+        }
+        if (SkinManager.isMen == false)
+        {
+            PlayerSprite = SelectedSkin_women.GetComponent<SpriteRenderer>().sprite;
+        }
+        //PlayerSprite = SelectedSkin.GetComponent<SpriteRenderer>().sprite;
         Player.GetComponent<SpriteRenderer>().sprite = PlayerSprite;
 
         if (PlayerSprite.name == "Women_neu_0")

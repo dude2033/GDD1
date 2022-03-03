@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class SkinManager : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class SkinManager : MonoBehaviour
     private int selectedSkin = 0;
     public GameObject playerskin;
 
+    public static bool isMen = true;
     SceneManagerScript SceneHandler;
 
     GameObject SceneObject;
@@ -45,7 +45,15 @@ public class SkinManager : MonoBehaviour
 
     public void PlayGame()
     {
-        PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/Prefabs/SelectSkin.prefab");
+        Debug.Log(selectedSkin);
+        if (selectedSkin == 0)
+        {
+            isMen = true;
+        }
+        else
+        {
+            isMen = false;
+        }
         StartCoroutine(LoadLevel("ExplanationScene"));
     }
 
