@@ -10,10 +10,12 @@ public class TimeMachineScript : MainDialgueHandler
 
 
     public Sprite rock;
-    public bool finsihed = false; 
-    
+    public bool finsihed = false;
+
     public override void setUpCondition()
     {
+
+
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         PickUpScript pickUpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpScript>();
         FirstRiddleCallScript script = GameObject.FindObjectOfType<FirstRiddleCallScript>();
@@ -21,29 +23,31 @@ public class TimeMachineScript : MainDialgueHandler
 
         //pickUpScript.pickUp(rock);
 
-           if(Inventory.rockAcq)
-           {
-               if(!finsihed)
-               {
-                DTrigger.currentDialogue.converstationElement =  1;
-                GameObject  [] test  = GameObject.FindGameObjectsWithTag("Slot");
-                //test[3].transform.GetChild(0).gameObject.SetActive(false);    
-                finsihed = true;
-                if(test.Length  == 4)
-                    Destroy(test[3]);
-               }
+        if (TeleportAutside.fromPast == false)
+        {
+            if (Inventory.rockAcq)
+            {
+                if (!finsihed)
+                {
+                    DTrigger.currentDialogue.converstationElement = 1;
+                    GameObject[] test = GameObject.FindGameObjectsWithTag("Slot");
+                    //test[3].transform.GetChild(0).gameObject.SetActive(false);    
+                    finsihed = true;
+                    if (test.Length == 4)
+                        Destroy(test[3]);
+                }
 
 
-            script.CustomOnMouseDown();
-           }
-             
+                script.CustomOnMouseDown();
+            }
+        }
 
 
     }
     public override void executeFunction(string choise)
     {
-          
 
-        
+
+
     }
 }
