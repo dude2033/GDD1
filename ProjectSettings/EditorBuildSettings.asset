@@ -18,11 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectPlayer.unity
     guid: ce618cf3f72c0684094ccca6517324a6
   - enabled: 1
-    path: Assets/Scenes/FutureGood.unity
-    guid: 515be3d4aff1e414d8e477d7570b0029
-  - enabled: 1
-    path: Assets/Scenes/FutureBad.unity
-    guid: b3a6e3ecd8333ad4d8ee2889e1a0f432
+    path: Assets/Scenes/ExplanationScene.unity
+    guid: e54c01b59e64ae9469e68760bd89334d
   - enabled: 1
     path: Assets/Scenes/Bunker.unity
     guid: c1d3de4cfe8c78846b1950766a435746
@@ -30,11 +27,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Past1.unity
     guid: 7747987f8b532c841bb22d3c3d9b463b
   - enabled: 1
-    path: Assets/Scenes/RiddleScene.unity
-    guid: a04a20bbe272d3f42820ef4745afb715
+    path: Assets/Scenes/FutureGood.unity
+    guid: 515be3d4aff1e414d8e477d7570b0029
   - enabled: 1
-    path: Assets/Scenes/ExplanationScene.unity
-    guid: e54c01b59e64ae9469e68760bd89334d
+    path: Assets/Scenes/FutureBad.unity
+    guid: b3a6e3ecd8333ad4d8ee2889e1a0f432
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 45899a0ecd48e91499057020d35bf298

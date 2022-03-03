@@ -2154,7 +2154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b1a02cde0183a44b52a211d08b6de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedSkin: {fileID: 3203987248162819387, guid: f5bbdf3aa7ef08843bf150d59673dcb3,
+  SelectedSkin_men: {fileID: 2156237642909516372, guid: d05d333703b66364bb7611f5858fecb7,
+    type: 3}
+  SelectedSkin_women: {fileID: 3859043548445519537, guid: 3cc6d77b024cdb54eb8b03d4422a868c,
     type: 3}
   Player: {fileID: 1431486729}
   male: {fileID: 9100000, guid: f3b97da9f49b048429879e9b494dcf3d, type: 2}
