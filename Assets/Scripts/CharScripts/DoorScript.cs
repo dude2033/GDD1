@@ -36,7 +36,6 @@ public class DoorScript : MainDialgueHandler
 
         if (inventory.BodyGuard == false)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Renderer>().enabled = false;
             DTrigger.currentDialogue.converstationElement = 2;
             DTrigger.currentDialogue.disableChoice = true;
         }

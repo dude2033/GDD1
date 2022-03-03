@@ -189,6 +189,6 @@ public class BodyguardScript : MainDialgueHandler
     {
         yield return new WaitForSeconds(5);
         BodyGuard.GetComponent<NPCMovement>().conditionToMove = true;
-        inventory.BodyGuard = true;
+        //inventory.BodyGuard = true;
     }
 }
