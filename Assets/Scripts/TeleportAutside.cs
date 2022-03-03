@@ -59,10 +59,10 @@ public class TeleportAutside : MonoBehaviour
 
         if (isBadFuture)
         {
-           
+
             if (fromPast)
             {
-                 GameObject.FindGameObjectWithTag("Inventory").gameObject.SetActive(false);
+                GameObject.FindGameObjectWithTag("Inventory").gameObject.SetActive(false);
                 Debug.Log("fromPast");
                 SoundManager.ChangeSound("FutureBad");
                 SceneHandler.LoadNewMap("FutureBad");
