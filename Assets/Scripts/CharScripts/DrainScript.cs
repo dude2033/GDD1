@@ -20,6 +20,9 @@ public class DrainScript : MainDialgueHandler
         finsihed = false;
         for(int i = 0; i < inventory.slots.Length; i++)
         {
+
+            if(inventory.isFull[i] == true)
+                
             if(inventory.slots[i].transform.GetChild(0).GetComponent<Image>().sprite.name == "Coin")
                 {
                     finsihed = true;

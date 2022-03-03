@@ -65,8 +65,12 @@ public class NPCMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
         if (other.gameObject.name != "MainPlayer")
         {
+            inventory.BodyGuard = true;
             Bodyguard.SetActive(false);
         }
     }
